@@ -1,7 +1,7 @@
 #!/bin/bash
 clear
 echo "Welcome $USER "
-choice="Encryprt Decrypt"
+choice="Encrypt Decrypt Exit"
 select option in $choice;
 do
 	if [ $REPLY = 1 ];
@@ -18,8 +18,10 @@ do
 		echo "Insert the file: "
 		read file2
 		gpg -d $file2
-else
-	exit 
+	elif [ $REPLY = 3 ];
+	then
+		echo "You decided to leave"
+		exit
 fi
 done
 
