@@ -20,7 +20,7 @@ do
 		gpg -d $file2
 	elif [ $REPLY = 3 ];
 	then
-		echo "You decided to leave"
+		echo "You chose to leave.."
 		exit
 fi
 done
