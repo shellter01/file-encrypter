@@ -11,6 +11,8 @@ do
 		echo -n "Insert the file: "
 		read file1
 		gpg -c $file1
+		file $file1.gpg
+		rm -rf $file1
 	elif [ $REPLY = 2 ];
 	then
 		echo "You have selected the Decrypt"
