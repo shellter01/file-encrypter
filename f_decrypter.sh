@@ -15,7 +15,7 @@ do
 		rm -rf $file1
 	elif [ $REPLY = 2 ];
 	then
-		echo "You have selected the Decrypt"
+		echo "You have selected Decrypt"
 		sleep 1
 		echo "Insert the file: "
 		read file2
