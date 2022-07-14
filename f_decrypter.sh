@@ -1,28 +1,27 @@
 #!/bin/bash
 clear
-echo "Welcome $USER "
+echo -e "\033[34m Welcome $USER \033[0m"
 choice="Encrypt Decrypt Exit"
 select option in $choice;
 do
 	if [ $REPLY = 1 ];
 	then
-		echo "You have selected Encrypt"
+		echo -e "\033[34m You have selected Encrypt \033[0m"
 		sleep 1
-		echo -n "Insert the file: "
+		echo -n -e "\033[32m Insert the file: \033[0m "
 		read file1
 		gpg -c $file1
-		file $file1.gpg
 		rm -rf $file1
 	elif [ $REPLY = 2 ];
 	then
-		echo "You have selected Decrypt"
+		echo -e "\033[34m You have selected Decrypt \033[0m"
 		sleep 1
-		echo "Insert the file: "
+		echo -e "\033[32m Insert the file: \033[0m"
 		read file2
 		gpg -d $file2
 	elif [ $REPLY = 3 ];
 	then
-		echo "You chose to leave.."
+		echo -e "\033[31m You chose to leave.. \033[0m"
 		exit
 fi
 done
