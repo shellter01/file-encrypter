@@ -21,7 +21,7 @@ do
 		gpg -d $file2
 	elif [ $REPLY = 3 ];
 	then
-		echo -e "\033[31m You chose to leave.. \033[0m"
+		echo -e "\033[31m Bye! \033[0m"
 		exit
 fi
 done
